@@ -1,0 +1,94 @@
+JSON Api Endpoints
+
+BASE_URL=http://localhost:5000
+
+----------User & Auth-------------
+
+Register:
+ROUTE - POST - /api/users
+DESC - Creates a new user.
+ACCESS - Private
+Fields = [firstname, lastname, email, password]
+
+Test Token:
+ROUTE - GET - /api/auth
+DESC - Checks if a token is valid.
+ACCESS - Public
+
+Login:
+ROUTE - POST - /api/auth
+DESC - Login a user a returns a token.
+ACCESS - Public
+Fields = [email, password]
+
+Get all:
+ROUTE - GET - /api/users
+DESC - Get all users
+ACCESS - Public
+
+Delete:
+ROUTE - DELETE - /api/users/:user_id
+DESC - Delete a user by id.
+ACCESS - Private
+Header = [x-auth-token]
+
+----------Character-------------
+
+Create:
+ROUTE - POST - /api/characters
+DESC - Creates a new character.
+ACCESS - Private
+Fields = [nickname, characterclass, passiveskill, skill1, skill2]
+Header = [x-auth-token]
+
+Edit:
+ROUTE - PUT - /api/characters/:character_id
+DESC - Edits a character.
+ACCESS - Private
+Fields = [passiveskill, skill1, skill2]
+Header = [x-auth-token]
+
+Get all:
+ROUTE - GET - /api/characters
+DESC - Get all characters.
+ACCESS - Private
+Header = [x-auth-token]
+
+Get:
+ROUTE - GET - /api/characters/character_id
+DESC - Get a single character by id.
+ACCESS - Private
+Header = [x-auth-token]
+
+Delete:
+ROUTE - DELETE - /api/characters/character_id
+DESC - Delete a character by id.
+ACCESS - Private
+Header = [x-auth-token]
+
+----------Monster-------------
+
+Create:
+ROUTE - POST - /api/monsters
+DESC - Creates a new monster.
+ACCESS - Private
+Fields = [name, monsterclass, skill1, skill2]
+Header = [x-auth-token]
+
+Get all:
+ROUTE - GET - /api/monsters
+DESC - Get all monsters
+ACCESS - Private
+Header = [x-auth-token]
+
+Get all:
+ROUTE - GET - /api/monsters/:monster_id
+DESC - Get a single monster by id.
+ACCESS - Private
+Header = [x-auth-token]
+
+Delete:
+ROUTE - DELETE - /api/monsters/:monster_id
+DESC - Delete a monster by id.
+ACCESS - Private
+Header = [x-auth-token]
