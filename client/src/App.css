@@ -1,0 +1,45 @@
+/* Reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Karma", serif, sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+button,
+input,
+textarea {
+  border-radius: 0;
+}
+
+@font-face {
+  font-family: "MedievalSharp"; /*a name to be used later*/
+  src: url("./assets/MedievalSharp.ttf"); /*URL to font*/
+}
+
+.m-1 {
+  margin: 0 1rem;
+}
