@@ -9,7 +9,7 @@ BASE_URL=http://localhost:5000
 Register:
 ROUTE - POST - /api/users
 DESC - Creates a new user.
-ACCESS - Private
+ACCESS - Public
 Fields = [firstname, lastname, email, password]
 
 Test Token:

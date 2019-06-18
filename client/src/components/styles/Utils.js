@@ -7,7 +7,8 @@ export const Container = styled.div`
   overflow: hidden;
 `;
 
-export const DarkButton = styled.a`
+export const DarkButton = styled.button`
+  font-family: inherit;
   font-size: 2.5rem;
   color: ${colors.color4};
   padding: 1rem 2rem;
@@ -17,7 +18,8 @@ export const DarkButton = styled.a`
   cursor: pointer;
 `;
 
-export const LightButton = styled.a`
+export const LightButton = styled.button`
+  font-family: inherit;
   font-size: 2.5rem;
   color: ${colors.color1};
   font-weight: bold;

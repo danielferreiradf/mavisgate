@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { NavbarS } from "../styles/Navbar";
 import { Container } from "../styles/Utils";
@@ -14,23 +15,25 @@ const Navbar = () => {
     <NavbarS>
       <Container>
         <div>
-          <img src={logo} alt="Mavisgate Logo" />
+          <Link to="/">
+            <img src={logo} alt="Mavisgate Logo" />
+          </Link>
           <ul>
             <li>
               <img src={banner} alt="Icon" />
-              <a href="!#">Characters</a>
+              <Link to="/characters">Characters</Link>
             </li>
             <li>
               <img src={executioner} alt="Icon" />
-              <a href="!#">Monsters</a>
+              <Link to="/monsters">Monsters</Link>
             </li>
             <li>
               <img src={key} alt="Icon" />
-              <a href="!#">Register</a>
+              <Link to="/register">Register</Link>
             </li>
             <li>
               <img src={tower} alt="Icon" />
-              <a href="!#">Login</a>
+              <Link to="/login">Login</Link>
             </li>
           </ul>
         </div>

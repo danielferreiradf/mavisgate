@@ -20,7 +20,6 @@ export const NavbarS = styled.nav`
   }
   ul {
     display: flex;
-    margin-top: 0.8rem;
   }
   ul li {
     display: flex;

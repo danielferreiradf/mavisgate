@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { ShowcaseS } from "../styles/Showcase";
-import { Container, DarkButton, LightButton } from "../styles/Utils";
+import { DarkButton, LightButton } from "../styles/Utils";
 
 const Showcase = () => {
   return (
@@ -12,8 +13,12 @@ const Showcase = () => {
           Create your character, defeat the monsters <br />
           and save the Mavis' World
         </h4>
-        <DarkButton className="m-1">Sign Up</DarkButton>
-        <LightButton className="m-1">Login</LightButton>
+        <Link to="/register">
+          <DarkButton className="m-1">Sign Up</DarkButton>
+        </Link>
+        <Link to="/login">
+          <LightButton className="m-1">Login</LightButton>
+        </Link>
       </div>
     </ShowcaseS>
   );
