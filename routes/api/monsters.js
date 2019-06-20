@@ -65,9 +65,9 @@ router.post(
 );
 
 // @route   GET api/monsters
-// @desc    Get all monster
-// @access  Private
-router.get("/", auth, async (req, res) => {
+// @desc    Get all monsters
+// @access  Public
+router.get("/", async (req, res) => {
   try {
     const monsters = await Monster.find({ name: { $exists: true } }).sort({
       name: 1

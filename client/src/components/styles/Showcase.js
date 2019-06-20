@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { colors } from "./variables";
 import background from "../../img/background.jpg";
+import { md, sm } from "./MediaQuery";
 
 export const ShowcaseS = styled.section`
   position: relative;
@@ -31,6 +32,10 @@ export const ShowcaseS = styled.section`
     text-align: center;
     font-weight: bold;
     padding: 0 1rem;
+
+    @media(max-width: ${sm}) {
+      margin-top: 1rem;
+    }
   }
   
   h4 {

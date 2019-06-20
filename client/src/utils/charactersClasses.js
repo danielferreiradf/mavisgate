@@ -1,20 +1,20 @@
-import knight from "../img/classes/knight.png";
-import asssassin from "../img/classes/assassin.png";
-import barbarian from "../img/classes/barbarian.png";
-import cleric from "../img/classes/cleric.png";
-import druid from "../img/classes/druid.png";
-import elf from "../img/classes/elf.png";
-import mage from "../img/classes/mage.png";
-import paladin from "../img/classes/paladin.png";
-import ranger from "../img/classes/ranger.png";
-import rogue from "../img/classes/rogue.png";
-import warrior from "../img/classes/warrior.png";
+// import knight from "../img/classes/knight.png";
+// import asssassin from "../img/classes/assassin.png";
+// import barbarian from "../img/classes/barbarian.png";
+// import cleric from "../img/classes/cleric.png";
+// import druid from "../img/classes/druid.png";
+// import elf from "../img/classes/elf.png";
+// import mage from "../img/classes/mage.png";
+// import paladin from "../img/classes/paladin.png";
+// import ranger from "../img/classes/ranger.png";
+// import rogue from "../img/classes/rogue.png";
+// import warrior from "../img/classes/warrior.png";
 
 export const charactersClasses = [
   {
     id: 1,
     name: "Knight",
-    img: `${knight}`,
+    // img: `${knight}`,
     bio:
       "Knights are masters of melee combat and fight with swords, axes and clubs. They possess greater physical strength than other vocations and are able to carry more items at any given level.As a result of their focus on physical skills, knights are severely lacking in terms of magical abilities.",
     passiveSkill: "God Bless",
@@ -32,7 +32,7 @@ export const charactersClasses = [
   {
     id: 2,
     name: "Ranger",
-    img: `${ranger}`,
+    // img: `${ranger}`,
     bio:
       "Rangers are usually associated with the wisdom of nature. Rangers tend to be wise, hardy, cunning, and perceptive in addition to being skilled woodsmen. Many are skilled in woodcraft, stealth, wilderness survival, beast-mastery, herbalism, tracking, and sometimes nature magic. Can wield only bows, allowing them to attack most enemy units without receiving a counterattack, but at the same time preventing them from counterattacking enemies who manage to close to melee range",
     passiveSkill: "Shooting Mastery",
@@ -49,7 +49,7 @@ export const charactersClasses = [
   {
     id: 3,
     name: "Rogue",
-    img: `${rogue}`,
+    // img: `${rogue}`,
     bio:
       "Rogues are skirmishers, focused on getting to where the enemy does not want them and hurting them by applying extra sneak attack damage to enemies that grant combat advantage to them. They are also highly skilled, with the most trained skills of any class in the game and all with training in stealth and thievery (a skill that includes picking locks and pockets, and disarming traps).",
     passiveSkill: "Force of Nature",
@@ -68,7 +68,7 @@ export const charactersClasses = [
   {
     id: 4,
     name: "Elf",
-    img: `${elf}`,
+    // img: `${elf}`,
     bio:
       "Elves use tracking and other wilderness skills to hunt down their enemies. Elves are renowned for their grace and mastery of magic and weapons such as the sword and bow. Becoming physically mature by the age of 25 and emotionally mature at around 125, they are also famously long-lived, capable of living more than half a millennium and remaining physically youthful. Possessed of innate beauty and easy gracefulness",
     passiveSkill: "Assassin Eye",
@@ -86,7 +86,7 @@ export const charactersClasses = [
   {
     id: 5,
     name: "Assassin",
-    img: `${asssassin}`,
+    // img: `${asssassin}`,
     bio:
       "Assassins usually have attacks that cause a high amount of damage in a short amount of time.In addition to the burst damage concept, the Assassin class is often designed with another mechanic known as damage over time. This is damage that slowly depletes the enemy's health without the Assassin physically attacking the enemy. This is most commonly achieved through poison and bleeding mechanics.",
     passiveSkill: "Critical Mastery",
@@ -105,7 +105,7 @@ export const charactersClasses = [
   {
     id: 6,
     name: "Warrior",
-    img: `${warrior}`,
+    // img: `${warrior}`,
     bio:
       "A archetypal warrior who uses brute strength and raw fury to excel in combat, instead of the honed skills of the Fighter or measured strength of the Monk. Warriors can tap their inner fury to fly into a berserker-like rage. Once the rage is expended, it provides bonuses to Strength ",
     passiveSkill: "Rage of Zechram",
@@ -124,7 +124,7 @@ export const charactersClasses = [
   {
     id: 7,
     name: "Barbarian",
-    img: `${barbarian}`,
+    // img: `${barbarian}`,
     bio:
       "The Barbarian, a member of any of several tribes on the fringes of civilization, rebuffs the influence of those he sees as soft and weak. Through ceaseless clan warfare barbarians bring the constant fury embracing his axe to bring death to his enemies.",
     passiveSkill: "Bloody  Destroyer",
@@ -142,7 +142,7 @@ export const charactersClasses = [
   {
     id: 8,
     name: "Paladin",
-    img: `${paladin}`,
+    // img: `${paladin}`,
     bio:
       "Paladins are masters of combat, well-balanced between weapons and shield. They focus on weapons like shields and swords to a deadly effect. They advance very fast in distance fighting and are quite capable.Paladins are not severely lacking in any area, but decimating enemies with weapons is what they do best.",
     passiveSkill: "Extreme Shield",
@@ -161,7 +161,7 @@ export const charactersClasses = [
   {
     id: 9,
     name: "Druid",
-    img: `${druid}`,
+    // img: `${druid}`,
     bio:
       "Druids are masters of nature and healing magic. Throughout history, they have used their skills and knowledge to the benefit of all humans. Nature can heal and protect, but can also cause widespread destruction. As such, druids command the powers of ice and earth to punish those who oppose the natural order.",
     passiveSkill: "Inner Peace",
@@ -179,7 +179,7 @@ export const charactersClasses = [
   {
     id: 10,
     name: "Mage",
-    img: `${mage}`,
+    // img: `${mage}`,
     bio:
       "Mages are masters of destructive, offensive and agressive magic. They have access to a vast array of combat spells and command the powers of fire, energy and death, which they can use to deal impressive damage to multiple enemies at once. Thanks to their quick advancement in magic level, they can also cast powerful damaging spells",
     passiveSkill: "Rain Maker",
@@ -199,7 +199,7 @@ export const charactersClasses = [
   {
     id: 11,
     name: "Cleric",
-    img: `${cleric}`,
+    // img: `${cleric}`,
     bio:
       "A cleric is a holy warrior, who is somewhere between a priest and warrior. Like the priest, his religion has bestowed upon him some 'holy magical power', specifically those 'white' magics used in healing.",
     passiveSkill: "Holy Mind",

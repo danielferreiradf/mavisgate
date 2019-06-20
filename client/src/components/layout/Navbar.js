@@ -12,17 +12,18 @@ import banner from "../../img/icons/banner.svg";
 import executioner from "../../img/icons/executioner.svg";
 import key from "../../img/icons/key.svg";
 import tower from "../../img/icons/tower.svg";
+import castle from "../../img/icons/castle.svg";
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
-        <img src={banner} alt="Icon" />
-        <Link to="/dashboard">Dashboard</Link>
+        <img src={castle} alt="Icon" />
+        <Link to="/create-character">Create Char</Link>
       </li>
       <li>
         <img src={banner} alt="Icon" />
-        <Link to="/mycharacters">My Characters</Link>
+        <Link to="/classes">Classes</Link>
       </li>
       <li>
         <img src={executioner} alt="Icon" />
@@ -41,7 +42,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <ul>
       <li>
         <img src={banner} alt="Icon" />
-        <Link to="/characters">Characters</Link>
+        <Link to="/classes">Classes</Link>
       </li>
       <li>
         <img src={executioner} alt="Icon" />

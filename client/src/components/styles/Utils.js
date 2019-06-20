@@ -16,6 +16,7 @@ export const DarkButton = styled.button`
   background: ${colors.color1};
   border: 1px solid ${colors.color4};
   cursor: pointer;
+  text-align: center;
 `;
 
 export const LightButton = styled.button`

@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { colors } from "./variables";
+import { md } from "./MediaQuery";
 
 import texture from "../../img/background3.jpg";
 
-export const CharactersS = styled.section`
+export const ClassesS = styled.section`
   background: url(${texture}) center center/cover;
   div {
     /* Container */
@@ -11,18 +12,29 @@ export const CharactersS = styled.section`
     div {
       margin: 2rem;
       display: flex;
-      border: 1px solid red;
       background: ${colors.color5};
       border: 1px solid ${colors.color3};
       margin: 1rem;
       /* flex-wrap: wrap; */
 
+      @media (max-width: ${md}) {
+        flex-direction: column;
+      }
+
       img {
         background: ${colors.color5};
         padding: 1rem;
         height: 20%;
+        min-height: 250px;
         width: 20%;
+        min-width: 250px;
         align-self: center;
+
+        @media (max-width: ${md}) {
+          height: 200px;
+          width: 30%;
+          min-width: 150px;
+        }
       }
 
       div {
@@ -55,6 +67,10 @@ export const CharactersS = styled.section`
           align-items: center;
           background: ${colors.color4};
           padding: 0.5rem;
+
+          @media (max-width: ${md}) {
+            flex-direction: column;
+          }
 
           h3 {
             font-family: "MedievalSharp";

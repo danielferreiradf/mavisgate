@@ -1,14 +1,20 @@
 import React from "react";
-import { charactersClasses } from "../../services/charactersClasses";
+import { charactersClasses } from "../../utils/charactersClasses";
 
-import { CharactersS } from "../styles/Characters";
+import { ClassesS } from "../styles/Classes";
 import { Container } from "../styles/Utils";
 
 const Characters = () => {
   const renderClasses = () => {
     return charactersClasses.map(char => (
       <div key={char.id}>
-        <img src={char.img} alt="Class" />
+        <img
+          src={
+            process.env.PUBLIC_URL +
+            `/img/classes/${char.name.toLocaleLowerCase()}.png`
+          }
+          alt="Class"
+        />
         <div>
           <h1>{char.name}</h1>
           <p>{char.bio}</p>
@@ -33,9 +39,9 @@ const Characters = () => {
     ));
   };
   return (
-    <CharactersS>
+    <ClassesS>
       <Container>{renderClasses()}</Container>
-    </CharactersS>
+    </ClassesS>
   );
 };
 

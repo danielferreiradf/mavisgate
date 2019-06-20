@@ -1,10 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 import { ShowcaseS } from "../styles/Showcase";
 import { DarkButton, LightButton } from "../styles/Utils";
 
-const Showcase = () => {
+const Showcase = ({ isAuthenticated }) => {
+  if (isAuthenticated) {
+    return <Redirect to="/dashboard" />;
+  }
+
   return (
     <ShowcaseS>
       <div>
@@ -24,4 +30,12 @@ const Showcase = () => {
   );
 };
 
-export default Showcase;
+Showcase.propTypes = {
+  isAuthenticated: PropTypes.bool
+};
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps)(Showcase);

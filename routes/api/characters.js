@@ -54,7 +54,9 @@ router.post(
       let character = await Character.findOne({ nickname });
 
       if (character) {
-        return res.status(400).json({ msg: "Nickname is already in use." });
+        return res
+          .status(400)
+          .json({ errors: [{ msg: "Nickname is already in use." }] });
       }
 
       // Create
@@ -130,10 +132,10 @@ router.put(
   }
 );
 
-// @route   GET api/characters
+// @route   GET api/characters/all
 // @desc    Get all characters
 // @access  Private
-router.get("/", auth, async (req, res) => {
+router.get("/all", auth, async (req, res) => {
   try {
     const characters = await Character.find().populate("user", [
       "name",
@@ -146,6 +148,28 @@ router.get("/", auth, async (req, res) => {
     res.json(characters);
   } catch (error) {
     console.error(error.message);
+    res.status(500).send("Server Error");
+  }
+});
+
+// @route   GET api/characters/
+// @desc    Get a character by user
+// @access  Private
+router.get("/", auth, async (req, res) => {
+  try {
+    const characters = await Character.find({ user: req.user.id });
+
+    if (!characters)
+      return res.status(400).json({ msg: "Characters not found." });
+
+    res.json(characters);
+  } catch (error) {
+    console.error(error.message);
+
+    if (error.kind === "ObjectId") {
+      return res.status(400).json({ msg: "Character not found." });
+    }
+
     res.status(500).send("Server Error");
   }
 });
@@ -188,7 +212,7 @@ router.delete("/:character_id", auth, async (req, res) => {
     }
 
     await character.remove();
-    res.json({ msg: "Character deleted." });
+    res.json(character);
   } catch (error) {
     console.error(error.message);
 

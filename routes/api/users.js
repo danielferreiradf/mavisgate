@@ -91,6 +91,26 @@ router.post(
 
 // ------------------------------------------------------------------------------------------
 
+// @route   GET api/users/me
+// @desc    Get current users profile
+// @access  Private
+router.get("/me", auth, async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id);
+
+    if (!user) return res.status(404).json({ msg: "User not found" });
+
+    res.json(user);
+  } catch (error) {
+    console.error(error.message);
+
+    if (error.kind === "ObjectId")
+      return res.status(404).json({ msg: "User not found." });
+
+    res.status(500).send("Server Error");
+  }
+});
+
 // @route   GET api/users
 // @desc    Get all user
 // @access  Public
@@ -105,16 +125,16 @@ router.get("/", async (req, res) => {
   }
 });
 
-// @route   DELETE api/users/:user_id
-// @desc    Delete a user by id
+// @route   DELETE api/users/
+// @desc    Delete a user account
 // @access  Public
-router.delete("/:user_id", auth, async (req, res) => {
+router.delete("/", auth, async (req, res) => {
   try {
-    const user = await User.findById(req.params.user_id);
+    // Delete Characters
+    await Character.deleteMany({ user: req.user.id });
 
-    if (!user) return res.status(404).json({ msg: "User not found" });
-
-    await user.remove();
+    // Delete User account
+    await User.findOneAndRemove({ _id: req.user.id });
 
     res.json({ msg: "User deleted." });
   } catch (error) {

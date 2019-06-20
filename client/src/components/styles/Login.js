@@ -11,7 +11,6 @@ export const LoginS = styled.div`
   align-items: center;
 
   section {
-    font-family: "MedievalSharp";
     text-align: center;
     background: ${colors.color1};
     border: 1px solid ${colors.color3};
@@ -20,6 +19,7 @@ export const LoginS = styled.div`
     margin: 1rem;
 
     h1 {
+      font-family: "MedievalSharp";
       font-size: 4rem;
       padding: 0rem 5rem;
       color: ${colors.color6};
@@ -27,6 +27,7 @@ export const LoginS = styled.div`
     }
 
     h3 {
+      font-family: "MedievalSharp";
       color: ${colors.color5};
       font-size: 2rem;
       margin-bottom: 2rem;

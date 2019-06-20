@@ -5,10 +5,13 @@ import Navbar from "./components/layout/Navbar";
 import Showcase from "./components/layout/Showcase";
 import Footer from "./components/layout/Footer";
 import Dashboard from "./components/Dashboard/Dashboard";
+import PrivateRoute from "./components/routing/PrivateRoute";
 
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
-import Characters from "./components/layout/Characters";
+import Classes from "./components/layout/Classes";
+import CreateCharater from "./components/account-forms/CreateCharacter";
+import Monsters from "./components/Monsters/Monsters";
 
 // Redux
 import { Provider } from "react-redux";
@@ -35,8 +38,14 @@ const App = () => {
         <Switch>
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
-          <Route exact path="/characters" component={Characters} />
-          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/Classes" component={Classes} />
+          <PrivateRoute exact path="/dashboard" component={Dashboard} />
+          <PrivateRoute
+            exact
+            path="/create-character"
+            component={CreateCharater}
+          />
+          <Route exact path="/monsters" component={Monsters} />
         </Switch>
         <Footer />
       </BrowserRouter>
