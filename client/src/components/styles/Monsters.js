@@ -35,7 +35,7 @@ export const MonstersS = styled.section`
         @media (max-width: ${md}) {
           height: 200px;
           width: 30%;
-          min-width: 150px;
+          min-width: 240px;
         }
       }
 

@@ -23,25 +23,27 @@ const Character = ({ character, deleteCharacter }) => {
     </tr>
   ));
   return (
-    <CharacterTableS>
+    <>
       <h2>My Characters</h2>
-      {character && (
-        <table>
-          <thead>
-            <tr>
-              <th>Nickname</th>
-              <th>Class</th>
-              <th>Created At</th>
-              <th>Passive Skill</th>
-              <th>Skill 1</th>
-              <th>Skill 2</th>
-              <th />
-            </tr>
-          </thead>
-          <tbody>{characters}</tbody>
-        </table>
-      )}
-    </CharacterTableS>
+      <CharacterTableS>
+        {character && (
+          <table>
+            <thead>
+              <tr>
+                <th>Nickname</th>
+                <th>Class</th>
+                <th>Created At</th>
+                <th>Passive Skill</th>
+                <th>Skill 1</th>
+                <th>Skill 2</th>
+                <th />
+              </tr>
+            </thead>
+            <tbody>{characters}</tbody>
+          </table>
+        )}
+      </CharacterTableS>
+    </>
   );
 };
 
