@@ -17,7 +17,7 @@ const Monsters = ({ getMonsters, monster: { monsters, loading } }) => {
       <MonstersS>
         <Container>
           {monsters.map(monster => (
-            <div key={monster.id}>
+            <div key={monster._id}>
               <img
                 src={
                   process.env.PUBLIC_URL +
