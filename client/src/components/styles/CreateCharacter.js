@@ -15,9 +15,12 @@ export const CreateCharacterS = styled.section`
     text-align: center;
     background: ${colors.color1};
     border: 1px solid ${colors.color3};
-    margin: 1rem 0;
     max-width: 800px;
     flex-direction: column;
+
+    @media (max-width: ${md}) {
+      width: 100%;
+    }
 
     input[type="text"] {
       font-family: inherit;
@@ -56,7 +59,10 @@ export const CreateCharacterS = styled.section`
       background: ${colors.color0};
 
       @media (max-width: ${md}) {
+        align-items: center;
         flex-direction: column;
+        margin-left: 2rem;
+        width: 90%;
       }
 
       div {
@@ -90,8 +96,10 @@ export const CreateCharacterS = styled.section`
 
       div {
         align-self: center;
-        width: 450px;
 
+        @media (max-width: ${md}) {
+          width: 100%;
+        }
         h2 {
           color: ${colors.color2};
           margin: 1rem 0;

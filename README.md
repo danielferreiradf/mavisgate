@@ -1,3 +1,3 @@
 Mavisgate RPG
 
-Project to learn NodeJs, React.
+Project to learn NodeJs, React & Redux.

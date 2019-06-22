@@ -21,10 +21,19 @@ router.post(
       check("monsterclass", "Class is required.")
         .not()
         .isEmpty(),
+      check("monsterbio", "Bio is required.")
+        .not()
+        .isEmpty(),
       check("skill1", "Skill 1 is required.")
         .not()
         .isEmpty(),
+      check("skill1bio", "Skill 1 Bio is required.")
+        .not()
+        .isEmpty(),
       check("skill2", "Skill 2 is required.")
+        .not()
+        .isEmpty(),
+      check("skill2bio", "Skill 2 Bio is required.")
         .not()
         .isEmpty()
     ]
@@ -36,14 +45,25 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { name, monsterclass, skill1, skill2 } = req.body;
+    const {
+      name,
+      monsterclass,
+      monsterbio,
+      skill1,
+      skill1bio,
+      skill2,
+      skill2bio
+    } = req.body;
 
     //   Build monster object
     const monsterFields = {};
     if (name) monsterFields.name = name;
     if (monsterclass) monsterFields.monsterclass = monsterclass;
+    if (monsterbio) monsterFields.monsterbio = monsterbio;
     if (skill1) monsterFields.skill1 = skill1;
+    if (skill1bio) monsterFields.skill1bio = skill1bio;
     if (skill2) monsterFields.skill2 = skill2;
+    if (skill2bio) monsterFields.skill2bio = skill2bio;
 
     try {
       let monster = await Monster.findOne({ name });

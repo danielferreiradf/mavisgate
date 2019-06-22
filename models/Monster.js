@@ -11,11 +11,23 @@ const MonsterSchema = new mongoose.Schema(
       type: String,
       required: true
     },
+    monsterbio: {
+      type: String,
+      required: true
+    },
     skill1: {
       type: String,
       required: true
     },
+    skill1bio: {
+      type: String,
+      required: true
+    },
     skill2: {
+      type: String,
+      required: true
+    },
+    skill2bio: {
       type: String,
       required: true
     }

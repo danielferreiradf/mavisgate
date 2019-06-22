@@ -11,10 +11,37 @@ const Monsters = ({ getMonsters, monster: { monsters, loading } }) => {
   useEffect(() => {
     getMonsters();
   }, []);
-  console.log(typeof monsters);
 
   const renderMonsters = () => {
-    return monsters.map(monster => <h1>{monster.name}</h1>);
+    return (
+      <MonstersS>
+        <Container>
+          {monsters.map(monster => (
+            <div key={monster.id}>
+              <img
+                src={
+                  process.env.PUBLIC_URL +
+                  `/img/monsters/${monster.name.toLocaleLowerCase()}.png`
+                }
+                alt={`Monster${monster.name}`}
+              />
+              <div>
+                <h1>{monster.name}</h1>
+                <p>{monster.monsterbio}</p>
+                <h2>Race: {monster.monsterclass}</h2>
+                <h2>Active Skills</h2>
+                <div>
+                  <h3>{monster.skill1}</h3>
+                  <p>{monster.skill1bio}</p>
+                  <h3>{monster.skill2}</h3>
+                  <p>{monster.skill2bio}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Container>
+      </MonstersS>
+    );
   };
 
   return loading ? (

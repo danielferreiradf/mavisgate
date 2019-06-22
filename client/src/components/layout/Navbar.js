@@ -19,7 +19,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <ul>
       <li>
         <img src={castle} alt="Icon" />
-        <Link to="/create-character">Create Char</Link>
+        <Link to="/create-character">New Char</Link>
       </li>
       <li>
         <img src={banner} alt="Icon" />
