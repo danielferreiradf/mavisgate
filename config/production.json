@@ -1,0 +1,5 @@
+{
+  "mongoURI": "mongodb+srv://daniel32:daniel32@cluster0-wpx36.mongodb.net/test?retryWrites=true",
+  "jwtSecret": "swordmaster",
+  "sendGridKey": "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"
+}

@@ -1,4 +1,3 @@
-import { Redirect } from "react-router-dom";
 import api from "../services/api";
 import { setAlert } from "./alert";
 
